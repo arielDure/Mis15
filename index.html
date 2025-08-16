@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis 15 Años - Isabella</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+    
+    .dancing-script { font-family: 'Dancing Script', cursive; }
+    .poppins { font-family: 'Poppins', sans-serif; }
+
+    .gradient-bg { background: linear-gradient(135deg, #b14db6 0%, #764ba2 100%); }
+    .card-shadow { box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+    .sparkle { animation: sparkle 2s infinite; }
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.1); }
+    }
+
+    .fade-in { animation: fadeIn 1s ease-in; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+
+    <!-- Header -->
+    <header class="text-center mb-12 fade-in">
+      <h1 class="dancing-script text-4xl sm:text-6xl md:text-8xl text-white font-bold mb-4">
+        Mis 15 Años
+      </h1>
+      <div class="flex justify-center items-center space-x-4">
+        <span class="text-3xl sm:text-4xl sparkle" aria-label="brillo">✨</span>
+        <h2 class="dancing-script text-2xl sm:text-4xl md:text-5xl text-pink-200">Brisa</h2>
+        <span class="text-3xl sm:text-4xl sparkle" aria-label="brillo">✨</span>
+      </div>
+    </header>
+
+    <!-- Foto Principal -->
+    <section class="max-w-md mx-auto mb-12 fade-in">
+      <div class="bg-white rounded-full p-4 card-shadow">
+        <img src="./Hija Vivi.jpg" 
+             alt="Foto de Isabella María"
+             class="w-80 h-80 mx-auto rounded-full border-4 border-pink-300 object-cover">
+      </div>
+    </section>
+
+    <!-- Detalles del Evento -->
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="bg-white rounded-3xl p-8 md:p-12 card-shadow fade-in">
+        <h3 class="dancing-script text-3xl sm:text-4xl text-center text-purple-800 mb-8">Detalles del Evento</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="text-center">
+            <div class="bg-pink-100 rounded-2xl p-6 mb-4">
+              <span class="text-4xl mb-4 block">📅</span>
+              <h4 class="poppins font-semibold text-xl text-gray-800 mb-2">Fecha</h4>
+              <p class="text-gray-600 text-lg">Sábado, 15 de Noviembre de 2025</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="bg-purple-100 rounded-2xl p-6 mb-4">
+              <span class="text-4xl mb-4 block">🕖</span>
+              <h4 class="poppins font-semibold text-xl text-gray-800 mb-2">Hora</h4>
+              <p class="text-gray-600 text-lg">21:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <div class="bg-blue-100 rounded-2xl p-6">
+            <span class="text-4xl mb-4 block">📍</span>
+            <h4 class="poppins font-semibold text-xl text-gray-800 mb-2">Dirección</h4>
+            <p class="text-gray-600 text-lg">Salón de Eventos "Los Jardines"</p>
+            <p class="text-gray-600">Av. Principal #123, Colonia Centro</p>
+            <p class="text-gray-600">Ciudad, Estado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confirma tu Asistencia -->
+    <section class="max-w-2xl mx-auto mb-12">
+      <div class="bg-white rounded-3xl p-8 card-shadow fade-in text-center">
+        <h3 class="dancing-script text-3xl sm:text-4xl text-purple-800 mb-6">Confirma tu Asistencia</h3>
+        
+        <!-- Botón a Google Forms -->
+        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeI3AkQS844vnkJGy_De8OBGEMSwdLelxUP-lgiqORHtRyttw/viewform')" 
+                class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white py-4 px-8 rounded-2xl font-semibold text-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
+          ✅ Confirmar Asistencia
+        </button>
+      </div>
+    </section>
+    <!-- Botones de interacción -->
+<section class="text-center my-12 space-x-4">
+  <a href="https://photos.app.goo.gl/Km2TBuXCRpJVt1C97" target="_blank" 
+     class="bg-pink-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-pink-600 transition">
+     📸 Subir fotos
+  </a>
+
+  <a href="https://www.mercadopago.com.ar/" target="_blank" 
+     class="bg-green-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-green-600 transition">
+     🎁 Hacer un regalo alias briiisatt.mp
+  </a>
+</section>
+
+    <!-- Mensaje Final -->
+    <footer class="text-center fade-in">
+      <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl p-8 max-w-2xl mx-auto">
+        <p class="dancing-script text-2xl sm:text-3xl text-white mb-4">
+          "Tu presencia es el mejor regalo"
+        </p>
+        <p class="poppins text-white text-lg">
+          ¡Esperamos celebrar juntos este día tan especial!
+        </p>
+        <div class="flex justify-center space-x-4 mt-6">
+          <span class="text-3xl sparkle">🎉</span>
+          <span class="text-3xl sparkle">💖</span>
+          <span class="text-3xl sparkle">🎊</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
