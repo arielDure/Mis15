@@ -50,7 +50,38 @@
              class="w-80 h-80 mx-auto rounded-full border-4 border-pink-300 object-cover">
       </div>
     </section>
+    <!-- Contador regresivo -->
+<section class="text-center my-12">
+  <h2 class="text-2xl font-bold mb-4 text-black">🌸 Falta muy poco para la gran noche 🌸</h2>
+  
+  <div id="countdown" 
+       class="text-3xl font-mono font-bold bg-purple-400 text-white px-6 py-4 rounded-xl inline-block shadow-lg">
+  </div>
+</section>
 
+<script>
+  // Fecha del evento (ejemplo: 15 de noviembre 2025 a las 23:00)
+  const eventDate = new Date("Nov 15, 2025 23:00:00").getTime();
+
+  const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("countdown").innerHTML = "🎉 ¡Hoy es la fiesta! 🎉";
+      clearInterval(countdown);
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = 
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+</script>
     <!-- Detalles del Evento -->
     <section class="max-w-4xl mx-auto mb-12">
       <div class="bg-white rounded-3xl p-8 md:p-12 card-shadow fade-in">
@@ -122,6 +153,7 @@
   </div>
 </body>
 </html>
+
 
 
 
